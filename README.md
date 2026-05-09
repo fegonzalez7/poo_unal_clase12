@@ -184,6 +184,21 @@ except Exception as error:
     </tbody>
 </table>
 
+**Ejemplo usando AttributeError:**
+
+```python
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+persona = Persona("Carlos", 30)
+try:
+    print(f"Hola, me llamo {persona.nacionalidad}")
+except AttributeError as e:
+    print(f"Error: {e}")
+```
+
 ### Creando Excepciones propias
 Para crear una excepción personalizada, definimos una nueva clase que herede de la clase `Exception` (en efecto, se tuvo que esperar 1 semestre para ver el `try`, entender el concepto de clase y poder heradar de `Exception`). 
 
@@ -247,7 +262,14 @@ except ValorInvalidoException as error:
 
 **Explicación:** En este ejemplo, la clase Calculadora define la excepción `ValorInvalidoException` para indicar cuando se introducen valores no válidos para la operación de división.
 
+---
+## Info adicional
 
+- [Ejemplos_de_exepciones](https://www.datacamp.com/es/tutorial/exception-handling-python)
+
+- [Ejercicios_hackerrank](https://www.hackerrank.com/challenges/exceptions/problem)
+
+---
 ## Reto 6: 
 1. Add the required exceptions in the Reto 1 code assigments.
 2. In the package `Shape` identify at least cases where exceptions are needed (maybe when validate input data, or math procedures) explain them clearly using comments and add them to the code.
